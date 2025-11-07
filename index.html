@@ -20,8 +20,32 @@
     <section class="intro">
       <h2>Información en tiempo real</h2>
       <p>Consulta datos actualizados de jugadores, equipos y resultados de la NBA.</p>
-      <button id="btnCargar">Cargar datos</button>
+      <button id="btnCargar" >Cargar datos</button>
     </section>
+     <div id="controls" style="margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+      <label>
+        Ver:
+        <select id="viewType">
+          <option value="team">Jugadores por equipo</option>
+          <option value="player">Jugador por id</option>
+        </select>
+      </label>
+      <label id="teamLabel">Team ID: <input id="teamId" value="13" style="width:80px"></label>
+      <label id="playerLabel" style="display:none">Player ID: <input id="playerId" placeholder="ej:3945274" style="width:100px"></label>
+      <label>Limite: <input id="limit" type="number" value="12" min="1" style="width:60px"></label>
+
+      <div style="display:flex;gap:6px;align-items:center;">
+        <span>Campos:</span>
+        <label><input type="checkbox" class="fieldCheckbox" value="fullName" checked> Nombre</label>
+        <label><input type="checkbox" class="fieldCheckbox" value="age" checked> Edad</label>
+        <label><input type="checkbox" class="fieldCheckbox" value="displayHeight"> Altura</label>
+        <label><input type="checkbox" class="fieldCheckbox" value="displayWeight"> Peso</label>
+        <label><input type="checkbox" class="fieldCheckbox" value="salary"> Salario</label>
+        <label><input type="checkbox" class="fieldCheckbox" value="image" checked> Foto</label>
+      </div>
+
+      
+    </div>
 
     <section id="resultados" class="panel">
       <p>Haz clic en "Cargar datos" para ver información en vivo.</p>
@@ -31,6 +55,7 @@
   <footer>
     <p>&copy; 2025 NBA Dashboard | Proyecto académico CESDE</p>
   </footer>
+  
 
   <script src="main.js"></script>
 </body>
