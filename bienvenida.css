@@ -9,7 +9,7 @@ html, body {
   position: relative;
 }
 
-/* Fondo dividido en 3 momentos con blur */
+
 .momentos-container {
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@ html, body {
   opacity: 0.6;
 }
 
-/* Texto centrado con animación */
+
 .bienvenida-texto {
   position: absolute;
   top: 50%;
@@ -68,7 +68,7 @@ html, body {
   to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
-/* Footer fijo */
+
 footer {
   position: absolute;
   bottom: 0;

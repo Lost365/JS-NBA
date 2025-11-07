@@ -1,4 +1,4 @@
-const url = 'https://api-nba-v1.p.rapidapi.com/players/statistics?game=8133';
+const url = 'https://api-nba-v1.p.rapidapi.com/players/statistics?game=10403';
 const options = {
   method: 'GET',
   headers: {
