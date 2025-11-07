@@ -1,0 +1,82 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fondo dividido en 3 momentos con blur */
+.momentos-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.momento {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  opacity: 0.6;
+}
+
+/* Texto centrado con animación */
+.bienvenida-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+  animation: fadeIn 2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.bienvenida-texto h1 {
+  font-size: 4em;
+  color: #ffebee;
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px 40px;
+  border-radius: 12px;
+  margin: 0;
+  align-items: center;
+}
+
+.bienvenida-texto p {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ccc;
+  animation: fadeIn 3s ease-in-out;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%) scale(0.9); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Footer fijo */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  z-index: 2;
+}
